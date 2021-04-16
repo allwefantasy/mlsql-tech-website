@@ -4,6 +4,7 @@ import zh_CN from './locale/zh_CN';
 import en_US from './locale/en_US';
 import MLSQLHeader from './components/MLSQLHeader'
 import MLSQLApp from './components/MLSQLApp'
+import { getBrowserLanguage } from './util'
 
 class App extends Component {
     state = {
@@ -13,6 +14,11 @@ class App extends Component {
 
     handleLocaleChange = (lang) => {
         this.setState({ lang, messages: lang === "zh" ? zh_CN : en_US });
+    }
+
+    componentDidMount () {
+        const language = getBrowserLanguage()
+        this.setState({lang: language.includes('zh') ? 'zh' : 'en'})
     }
 
     render() {

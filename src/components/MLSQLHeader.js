@@ -3,6 +3,7 @@ import pineTree from '../image/pine-tree.png';
 import github from '../image/github.png';
 import search from '../image/search.png';
 import menu from '../image/menu.png';
+import language from '../image/language.png';
 import {FormattedMessage} from "react-intl";
 
 export default class MLSQLHeader extends Component {
@@ -18,15 +19,29 @@ export default class MLSQLHeader extends Component {
         { text: <FormattedMessage id={"video"}/>, url: 'https://space.bilibili.com/22610047/video' }
       ],
       isDropMenuOpen: false,
+      isDisplayLanguage: false
     };
 
     this.onChange = this.onChange.bind(this);
     this.displayDropMenu = this.displayDropMenu.bind(this);
+    this.displayDropLanguage = this.displayDropLanguage.bind(this);
   }
 
   displayDropMenu() {
+    if (this.state.isDisplayLanguage) {
+      this.displayDropLanguage()
+    }
     this.setState({
       isDropMenuOpen: !this.state.isDropMenuOpen
+    })
+  }
+
+  displayDropLanguage () {
+    if (this.state.isDropMenuOpen) {
+      this.displayDropMenu()
+    }
+    this.setState({
+      isDisplayLanguage: !this.state.isDisplayLanguage
     })
   }
 
@@ -74,10 +89,16 @@ export default class MLSQLHeader extends Component {
               <img alt='' src={github} width="16" style={{ float: 'right' }}/>
             </div>
           </div>
-          <div className="nav-item nav-small header-nav-right">
-            <a href="#" className="nav-link" onClick={() => { onLocaleChange('zh'); }}>中</a>
-            <span className="nav-link-split" />
-            <a href="#" className="nav-link" onClick={() => { onLocaleChange('en'); }}>En</a>
+          <div className="nav-lang">
+            <img alt='' src={language} width="20" onClick={ this.displayDropLanguage }/>
+            <div className="nav-menu-drop" style={{ display: this.state.isDisplayLanguage ? 'block' : 'none' }}>
+              <div className="nav-menu-drop-item">
+                <a href="javascript:;" onClick={() => { onLocaleChange('zh') }}>中文</a>
+              </div>
+              <div className="nav-menu-drop-item">
+                <a href="javascript:;" onClick={() => { onLocaleChange('en') }}>English</a>
+              </div>
+            </div>
           </div>
           <div className="nav-item header-nav-right">
             <div className="nav-search">
