@@ -30,6 +30,7 @@ select rf_predict(features) from data as result;`,
     join_wechat_group_desc: "Scan the QR code and send the keyword mlsql to join the wechat group.",
     aliyun_support: "Cloud Native",
     aliyun_support_desc: "Use MLSQL and analytics workspace to process your own data stored on Ali Cloud via http://analysis.mlsql.tech/",
+    aliyun_support_desc2: "MLSQL engines can be easily deployed not only via Yarn, but also on clouds with K8S supports",
     load_save_1: "Easy to Use Web IDE",
     load_save_1_desc: "Manage your MLSQL scripts in Web IDE",
     load_save_1_code: `load excel.\`/tmp/data.excel\` as table1;
