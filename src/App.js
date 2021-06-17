@@ -18,7 +18,10 @@ class App extends Component {
 
     componentDidMount () {
         const language = getBrowserLanguage()
-        this.setState({lang: language.includes('zh') ? 'zh' : 'en'})
+        this.setState({
+            lang: language.includes('zh') ? 'zh' : 'en',
+            messages: language.includes('zh') ? zh_CN : en_US
+        })
     }
 
     render() {
