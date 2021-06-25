@@ -4,7 +4,7 @@ const zh_CN = {
     blog: "博客",
     tutorial: "文档",
     community: "社区",
-    downdloads: "下载",
+    downloads: "下载",
     video: "视频",
     desc: "一门面向大数据和AI的语言",
     desc2: "一个真正整合数据管理，商业分析，机器学习的统一平台",
@@ -43,7 +43,7 @@ save overwrite table1 as hive.\`db.table2\`;
     load_save_2_desc:"你可以使用MLSQL做大数据处理以及算法模型训练，预测。MLSQL完美融合了大数据和AI。",
     load_save_2_code: `select * from table1 as newtable;
 
-select split(col1) as col1 as newtable as output; 
+select split(col1) as col1 as newtable as output;
 `,
     load_save_3: "无SQL高阶分析工坊",
     load_save_3_desc:"基于MLSQL强大的表达能力，我们很容易基于他开发出高效的无SQL分析工具",

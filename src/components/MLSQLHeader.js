@@ -12,7 +12,7 @@ export default class MLSQLHeader extends Component {
     this.state = {
       keyword: 'Search docs',
       navs: [
-        { text: <FormattedMessage id={"downdloads"}/>, url: 'http://download.mlsql.tech' },
+        { text: <FormattedMessage id={"downloads"}/>, url: 'http://download.mlsql.tech' },
         { text: <FormattedMessage id={"tutorial"}/>, url: 'http://docs.mlsql.tech/mlsql-console/' },
         { text: <FormattedMessage id={"community"}/>, url: 'https://github.com/allwefantasy/mlsql' },
         { text: <FormattedMessage id={"blog"}/>, url: 'http://blog.mlsql.tech/' },

@@ -4,7 +4,7 @@ const en_US = {
     blog: "Blog",
     tutorial: "Documentation",
     community: "Community",
-    downdloads: "Downdloads",
+    downloads: "Downloads",
     video: "Video",
     desc: "The Programming Language Designed For Big Data and AI",
     desc2: "The Unified Platform for Data Management, Business Analysis and Machine Learning",
@@ -43,7 +43,7 @@ save overwrite table1 as hive.\`db.table2\`;
     load_save_2_desc: "MLSQL provides an unified language for big data ETL and machine learning",
     load_save_2_code: `select * from table1 as newtable;
 
-select split(col1) as col1 as newtable as output; 
+select split(col1) as col1 as newtable as output;
 `,
     load_save_3: "No code analytics workshop",
     load_save_3_desc: "No code plugins and tools can be easily developed thanks to excellent expresssion ability of MLSQL",
